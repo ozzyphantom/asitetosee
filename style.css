@@ -1,0 +1,177 @@
+/* General body and font styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FDFBF5; /* Cream */
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+
+    /* Faint background pattern - opacity increased for more visibility */
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='0.5' fill='rgba(51,51,51,0.045)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-position: 0 0; /* Initial position, JS will move it */
+    background-attachment: fixed; /* Pattern is fixed relative to viewport */
+}
+
+/* Accent color utilities */
+.accent-yellow {
+    color: #FFD700; /* Bright Yellow */
+}
+.bg-accent-yellow {
+    background-color: #FFD700; /* Bright Yellow */
+}
+.border-accent-yellow {
+    border-color: #FFD700;
+}
+.hover-accent-yellow:hover {
+    color: #FFD700;
+}
+
+/* Smooth scrolling behavior */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+/* Animation for sections fading in */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pulsing dot for visual emphasis */
+.pulsing-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    animation: pulse 2s infinite ease-in-out;
+}
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Logo styling */
+.logo-img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 0.5rem; 
+}
+
+/* Card styling for content blocks */
+.content-card {
+    background-color: #FFFFFF;
+    border-radius: 0.75rem; 
+    padding: 2rem; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation link styling */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #333; /* Default text color for nav links */
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px; /* Position underline below the text */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFD700; /* Accent yellow for underline */
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #111; /* Slightly darken text on hover */
+}
+.nav-link:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+/* Custom button styling */
+.custom-btn {
+    padding: 0.75rem 1.5rem; 
+    border-radius: 0.5rem; 
+    font-weight: 500; /* Tailwind's 'medium' */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-btn-primary {
+    background-color: #FFD700; /* Accent yellow */
+    color: #333; /* Dark text for contrast */
+    border: 2px solid #FFD700;
+}
+.custom-btn-primary:hover {
+    background-color: #f0c800; /* Slightly darker yellow */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+.custom-btn-secondary {
+    background-color: transparent;
+    color: #333; /* Dark text */
+    border: 2px solid #333; /* Dark border */
+}
+.custom-btn-secondary:hover {
+    background-color: #333; /* Dark background on hover */
+    color: #FDFBF5; /* Cream text for contrast */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+/* Ensure SVGs within buttons inherit color changes properly on hover for secondary buttons */
+.custom-btn-secondary:hover svg {
+    fill: #FDFBF5; 
+}
+
+
+/* Animation for highlighting a section after navigation */
+.section-highlight {
+    animation: pulse-border 1.5s ease-out;
+}
+@keyframes pulse-border {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 215, 0, 0.7); /* Accent yellow with some opacity */
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(255, 215, 0, 0.3); /* Expand and fade */
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgba(255, 215, 0, 0); /* Fade out completely */
+    }
+}
+
+/* Default padding for sections for consistent highlight visibility */
+/* These are applied in index.html via Tailwind (e.g., px-4 sm:px-6 lg:px-8) 
+   but added here as a base for clarity if Tailwind classes were missed on a section. */
+section {
+    padding-left: 1rem; 
+    padding-right: 1rem;
+}
+@media (min-width: 640px) { /* sm breakpoint */
+    section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+@media (min-width: 1024px) { /* lg breakpoint */
+    section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Tailwind utility classes are still used in the HTML for most layout and responsive styling.
+   This CSS file primarily contains custom styles, animations, and base styles not easily
+   achievable with Tailwind out-of-the-box or for overrides/defaults. */
