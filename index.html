@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar - Problem Solver, Writer, Thinker</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CDN for simplicity, can be set up via CLI for production -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body class="smooth-scroll leading-relaxed">
+
+    <!-- Header / Navigation -->
+    <header class="py-6 px-4 sm:px-6 lg:px-8 sticky top-0 z-50 bg-FDFBF5/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- IMPORTANT: Replace with the path to your actual logo file -->
+                <img src="https://storage.googleapis.com/aai-web-samples/misc/logoforozzy.jpg" alt="Oscar's Logo" class="logo-img">
+                <span class="text-2xl font-semibold text-gray-800">Oscar</span>
+            </div>
+            <nav class="space-x-6">
+                <a href="#about" class="nav-link text-gray-700">A Bit About Me</a>
+                <a href="#approach" class="nav-link text-gray-700">My Approach</a>
+                <a href="#connect" class="nav-link text-gray-700">Say Hello</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-[calc(100vh-88px)] flex items-center justify-center py-20 fade-in-section">
+        <div class="text-center max-w-3xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+                Hi, I'm Oscar<span class="accent-yellow">.</span><br class="hidden sm:block"/> I love untangling tricky problems<span class="accent-yellow">.</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-10">
+                I get a kick out of exploring how things work, from tech and systems to the stories we tell. My goal? Finding clear, elegant ways forward, even when things seem messy.
+            </p>
+            <a href="#about" class="custom-btn custom-btn-primary">
+                Learn More About Me
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 ml-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0L13.5 19.5M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-24 fade-in-section">
+        <div class="container mx-auto">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">Driven by Curiosity</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">It's not just about *how* things function, but the *why* behind them. That's what truly fascinates me and pushes me to make things better.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="content-card" style="transition-delay: 0.2s;">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">A Knack for Problem-Solving</h3>
+                    <p class="text-gray-600 mb-4">
+                        I don't see challenges as dead ends; they're more like puzzles inviting a fresh look. I like to dig deep, try out different ideas, and keep asking questions until the simplest, most effective solution clicks into place. It’s like patiently untangling a knot – satisfying when you find the way.
+                    </p>
+                    <p class="text-gray-600">
+                        Whether it's refining code, shaping a strategy, or designing a product, my aim is always to turn the complex into something that just *works*, beautifully.
+                    </p>
+                </div>
+                <div class="content-card" style="transition-delay: 0.4s;">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Thinking Through Writing</h3>
+                    <p class="text-gray-600 mb-4">
+                        For me, writing is thinking. It's how I explore different angles, make sense of complex ideas, and share them clearly. I believe a well-put thought can be as satisfying as a perfect piece of code.
+                    </p>
+                    <p class="text-gray-600">
+                         I'm less about just listing facts and more about sharing insights that spark a new thought or inspire action. I'm fascinated by the stories that frame our world and how we can build better ones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="py-16 sm:py-24 bg-gray-50 fade-in-section">
+        <div class="container mx-auto">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">How I Like to Work</h2>
+                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">A few things that guide my thinking and doing:</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="content-card" style="transition-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent-yellow p-2 rounded-full mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-800">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Go Deep</h3>
+                    </div>
+                    <p class="text-gray-600">To really get it, you have to look past the surface. I believe in getting a solid grasp of the core elements before building anything on top.</p>
+                </div>
+                <div class="content-card" style="transition-delay: 0.4s;">
+                     <div class="flex items-center mb-4">
+                        <div class="bg-accent-yellow p-2 rounded-full mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-800">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 11.667 0l3.181-3.183m-4.991-2.691v4.992" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Build, Learn, Repeat</h3>
+                    </div>
+                    <p class="text-gray-600">The best ideas often come from trying things out, seeing what happens, and tweaking as you go. I'm all for this kind of iterative learning and improvement.</p>
+                </div>
+                <div class="content-card" style="transition-delay: 0.6s;">
+                     <div class="flex items-center mb-4">
+                        <div class="bg-accent-yellow p-2 rounded-full mr-3">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-800">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.063c-.997 0-1.918-.47-2.577-1.228-.659-.757-1.168-1.716-1.421-2.767-.253-1.051-.295-2.14.019-3.216.313-1.076.874-2.084 1.615-2.93.741-.846 1.666-1.522 2.696-1.972 1.03-.45 2.143-.668 3.265-.626 1.122.042 2.206.328 3.191.829.985.502 1.861 1.216 2.563 2.087a7.458 7.458 0 0 1 1.298 2.718 7.53 7.53 0 0 1 .132 2.915 7.237 7.237 0 0 1-1.15 2.769c-.019.022-.038.045-.058.067m-10.246-1.14A5.962 5.962 0 0 0 6 15.75c0 1.087.307 2.108.83 2.969m1.01-8.628.017-.017m-.017.017a3.75 3.75 0 0 0-5.286 0L2.25 12l3.536 3.536a3.75 3.75 0 0 0 5.285 0l3.536-3.536a3.75 3.75 0 0 0 0-5.286L11.07 5.25 9.053 7.267Z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Connect with Purpose</h3>
+                    </div>
+                    <p class="text-gray-600">Tech and ideas are at their best when they bring people together and add real value. My aim is to create things that are useful, yes, but also thoughtful and human.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="py-16 sm:py-24 fade-in-section">
+        <div class="container mx-auto text-center">
+            <div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Want to Chat<span class="pulsing-dot ml-2"></span></h2>
+                <p class="text-lg text-gray-600 mb-10 max-w-xl mx-auto">
+                    I'm always up for discussing interesting ideas, new challenges, or how we might work together.
+                </p>
+                <div class="flex flex-wrap justify-center items-center gap-6">
+                    <a href="https://linkedin.com/in/ozzyphantom" target="_blank" rel="noopener noreferrer" class="custom-btn custom-btn-secondary group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-2 transition-colors duration-300 group-hover:text-FDFBF5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/ozzyphantom" target="_blank" rel="noopener noreferrer" class="custom-btn custom-btn-secondary group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-2 transition-colors duration-300 group-hover:text-FDFBF5"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://pixelfed.social/ozzyphantom" target="_blank" rel="noopener noreferrer" class="custom-btn custom-btn-secondary group">
+                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6 mr-2 transition-colors duration-300 group-hover:text-FDFBF5"> <g> <path fill="none" d="M0 0H24V24H0z"></path> <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm1.031 4.099c1.713 0 3.101 1.345 3.101 3.005s-1.388 3.005-3.1 3.005h-1.819L8.618 16.58V9.832c0-.957.801-1.733 1.79-1.733h2.623z"></path> </g> </svg>
+                        PixelFed
+                    </a>
+                    <a href="mailto:iloveyou@ozzyphantom.com" class="custom-btn custom-btn-secondary group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-2 transition-colors duration-300 group-hover:text-FDFBF5">
+                            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                        </svg>
+                        Email Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center bg-gray-100">
+        <p class="text-gray-600">&copy; <span id="currentYear"></span> Oscar. All rights reserved.</p>
+        <p class="text-sm text-gray-500 mt-1">Crafted with <span class="accent-yellow">&hearts;</span> and code.</p>
+    </footer>
+
+    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
