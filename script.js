@@ -108,4 +108,57 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true }); // Use passive listener for better scroll performance
 
+    // Hamburger Menu Toggle Functionality
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburgerButton && mobileMenu) {
+        hamburgerButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Optional: Toggle ARIA attributes for accessibility
+            const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true' || false;
+            hamburgerButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.setAttribute('aria-hidden', isExpanded); // If menu was open (expanded is true), it's now hidden (so isExpanded is true for aria-hidden)
+        });
+
+        // Close mobile menu when a link inside it is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', (e) => { // Added 'e' parameter
+                // Hide the menu
+                mobileMenu.classList.add('hidden');
+                // Reset hamburger ARIA attribute
+                hamburgerButton.setAttribute('aria-expanded', 'false');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+
+                // Replicate smooth scroll behavior for mobile links
+                // This is similar to the existing smooth scroll for nav-links
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    e.preventDefault(); // Prevent default anchor jump only if target exists for scrolling
+
+                    // Remove highlight from any previously highlighted section
+                    document.querySelectorAll('.section-highlight').forEach(highlightedSec => {
+                        highlightedSec.classList.remove('section-highlight');
+                    });
+
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Add highlight class after a short delay
+                    setTimeout(() => {
+                        targetElement.classList.add('section-highlight');
+                        setTimeout(() => {
+                            targetElement.classList.remove('section-highlight');
+                        }, 1500); // Duration of the pulse-border animation
+                    }, 300); // Small delay
+                }
+                // If targetElement is not found, the default anchor behavior will try to navigate.
+            });
+        });
+    }
 });

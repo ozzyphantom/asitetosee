@@ -175,3 +175,38 @@ section {
 /* Tailwind utility classes are still used in the HTML for most layout and responsive styling.
    This CSS file primarily contains custom styles, animations, and base styles not easily
    achievable with Tailwind out-of-the-box or for overrides/defaults. */
+
+/* Mobile Menu Styles */
+/* The #mobile-menu is targeted by ID. It's made visible by JS toggling Tailwind's 'hidden' class. */
+/* Its parent <header> has py-6, so top: 100% should be from the bottom of that padding. */
+/* The <header> has class "sticky top-0 z-50", so mobile menu needs to be less than 50 or it might overlay header weirdly if not careful */
+#mobile-menu {
+    position: absolute; /* Relative to the header or nearest positioned ancestor */
+    top: 100%; /* Positioned directly below the header's bottom edge */
+    left: 0;
+    right: 0;
+    background-color: #FDFBF5; /* Match site's cream background */
+    padding: 1rem; /* Overall padding for the menu */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 45; /* Below header (z-50) but above other page content */
+    /* Tailwind 'hidden' class will be used by JS to toggle display. These styles apply when it's not hidden. */
+}
+
+#mobile-menu a {
+    display: block; /* Make links take full width */
+    padding: 0.75rem 1rem; /* Padding for tap targets */
+    text-align: center; /* Center text within links */
+    color: #333; /* Standard text color */
+    font-weight: 500; /* Medium font weight */
+    border-bottom: 1px solid #e5e7eb; /* Light border for separation (Tailwind gray-200) */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#mobile-menu a:hover {
+    background-color: #f3f4f6; /* Light gray background on hover (Tailwind gray-100) */
+    color: #111; /* Darker text on hover */
+}
+
+#mobile-menu a:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
