@@ -18,11 +18,27 @@
                 <img src="/logoforozzy.webp" alt="Oscar's Logo" class="logo-img">
                 <span class="text-2xl font-semibold text-gray-800">Oscar</span>
             </div>
-            <nav class="space-x-6">
+            <!-- Hamburger Button -->
+            <button id="hamburger-button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-6">
                 <a href="#about" class="nav-link text-gray-700">A Bit About Me</a>
                 <a href="#approach" class="nav-link text-gray-700">My Approach</a>
                 <a href="#connect" class="nav-link text-gray-700">Say Hello</a>
             </nav>
+        </div>
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">A Bit About Me</a>
+                <a href="#approach" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">My Approach</a>
+                <a href="#connect" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Say Hello</a>
+            </div>
         </div>
     </header>
 
