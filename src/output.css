@@ -46,6 +46,8 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-cream: #FDFBF5;
+    --color-accent-yellow: #FFD700;
   }
 }
 @layer base {
@@ -349,6 +351,15 @@
   .rounded-md {
     border-radius: var(--radius-md);
   }
+  .bg-accent-yellow {
+    background-color: var(--color-accent-yellow);
+  }
+  .bg-cream\/80 {
+    background-color: color-mix(in srgb, #FDFBF5 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-cream) 80%, transparent);
+    }
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
@@ -464,6 +475,13 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .group-hover\:text-cream {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-cream);
+      }
+    }
   }
   .hover\:bg-gray-50 {
     &:hover {
@@ -590,7 +608,7 @@
 }
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #FDFBF5;
+  background-color: var(--color-cream);
   color: #333;
   overflow-x: hidden;
   background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='0.5' fill='rgba(51,51,51,0.045)'/%3E%3C/svg%3E");
@@ -599,16 +617,16 @@ body {
   background-attachment: fixed;
 }
 .accent-yellow {
-  color: #FFD700;
+  color: var(--color-accent-yellow);
 }
 .bg-accent-yellow {
-  background-color: #FFD700;
+  background-color: var(--color-accent-yellow);
 }
 .border-accent-yellow {
-  border-color: #FFD700;
+  border-color: var(--color-accent-yellow);
 }
 .hover-accent-yellow:hover {
-  color: #FFD700;
+  color: var(--color-accent-yellow);
 }
 .smooth-scroll {
   scroll-behavior: smooth;
@@ -626,7 +644,7 @@ body {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-color: #FFD700;
+  background-color: var(--color-accent-yellow);
   border-radius: 50%;
   animation: pulse 2s infinite ease-in-out;
 }
@@ -668,7 +686,7 @@ body {
   bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #FFD700;
+  background-color: var(--color-accent-yellow);
   transition: width 0.3s ease;
 }
 .nav-link:hover {
@@ -687,9 +705,9 @@ body {
   justify-content: center;
 }
 .custom-btn-primary {
-  background-color: #FFD700;
+  background-color: var(--color-accent-yellow);
   color: #333;
-  border: 2px solid #FFD700;
+  border: 2px solid var(--color-accent-yellow);
 }
 .custom-btn-primary:hover {
   background-color: #f0c800;
@@ -702,11 +720,11 @@ body {
 }
 .custom-btn-secondary:hover {
   background-color: #333;
-  color: #FDFBF5;
+  color: var(--color-cream);
   transform: translateY(-2px);
 }
 .custom-btn-secondary:hover svg {
-  fill: #FDFBF5;
+  fill: var(--color-cream);
 }
 .section-highlight {
   animation: pulse-border 1.5s ease-out;
@@ -743,7 +761,7 @@ section {
   top: 100%;
   left: 0;
   right: 0;
-  background-color: #FDFBF5;
+  background-color: var(--color-cream);
   padding: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   z-index: 45;
